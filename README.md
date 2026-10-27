@@ -2,6 +2,8 @@
 
 A responsive, beginner-friendly travel planning web app. Enter a destination, trip length, budget, interests, and travel pace to generate a suggested day-by-day itinerary with an estimated budget.
 
+# Direct access Link : https://roamly-planner.netlify.app
+
 ## Features
 
 - Responsive layout for desktop, tablet, and mobile
