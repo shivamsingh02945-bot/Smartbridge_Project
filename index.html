@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123c35">
+  <title>Roamly — Personalized Travel Planner</title>
+  <meta name="description" content="Create a personalized day-by-day travel itinerary and estimate your trip budget with Roamly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Roamly home"><span class="brand-mark">r.</span><span>roamly</span></a>
+    <nav><a href="#how-it-works">How it works</a><a href="#planner">Plan a trip</a></nav>
+    <a class="nav-cta" href="#planner">Start planning <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEXT ADVENTURE STARTS HERE</div>
+        <h1>Less planning.<br><em>More wandering.</em></h1>
+        <p class="hero-subtitle">Turn your travel dreams into a day-by-day plan that fits your interests, pace, and budget.</p>
+        <a class="primary-link" href="#planner">Build my itinerary <span>→</span></a>
+        <div class="hero-proof"><div class="avatar-stack"><span>✦</span><span>⌁</span><span>☼</span></div><p><strong>Made for curious travelers</strong><br><small>Your trip, your kind of adventure.</small></p></div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-image" role="img" aria-label="Scenic mountain lake travel photograph"></div>
+        <div class="floating-note"><span class="note-icon">✈</span><div><strong>Your next chapter</strong><small>One great trip away</small></div></div>
+        <div class="photo-caption"><span>↗</span> FIND YOUR SOMEWHERE</div>
+      </div>
+      <div class="hero-stamp"><span>GO<br>EXPLORE</span><b>✳</b></div>
+    </section>
+
+    <section class="planner-section" id="planner">
+      <div class="section-heading">
+        <div><div class="eyebrow">LET'S MAKE IT HAPPEN</div><h2>Your trip, thoughtfully planned.</h2></div>
+        <p>Tell us a little about your getaway.<br>We'll take care of the itinerary.</p>
+      </div>
+      <div class="planner-layout">
+        <form id="trip-form" class="planner-card">
+          <div class="form-title"><span class="step-number">01</span><div><h3>Trip essentials</h3><p>Start with the basics.</p></div></div>
+          <label for="destination">Where do you want to go?</label>
+          <div class="input-with-icon"><span>⌖</span><input id="destination" name="destination" placeholder="e.g. Jaipur, Goa, Manali" required maxlength="60"></div>
+          <div class="two-col">
+            <div><label for="days">How many days?</label><select id="days" name="days"><option value="1">1 day</option><option value="2">2 days</option><option value="3" selected>3 days</option><option value="4">4 days</option><option value="5">5 days</option><option value="6">6 days</option><option value="7">7 days</option></select></div>
+            <div><label for="budget">Budget per person</label><select id="budget" name="budget"><option value="budget">Budget (₹)</option><option value="moderate" selected>Comfortable (₹₹)</option><option value="premium">Premium (₹₹₹)</option></select></div>
+          </div>
+          <label>What do you love doing?</label>
+          <div class="interest-grid">
+            <label class="interest-option"><input type="checkbox" name="interest" value="culture" checked><span>🏛️</span> Culture</label>
+            <label class="interest-option"><input type="checkbox" name="interest" value="food" checked><span>🍜</span> Food</label>
+            <label class="interest-option"><input type="checkbox" name="interest" value="nature"><span>🌿</span> Nature</label>
+            <label class="interest-option"><input type="checkbox" name="interest" value="adventure"><span>🥾</span> Adventure</label>
+            <label class="interest-option"><input type="checkbox" name="interest" value="relax"><span>☀️</span> Relax</label>
+            <label class="interest-option"><input type="checkbox" name="interest" value="shopping"><span>🛍️</span> Shopping</label>
+          </div>
+          <label for="pace">What's your travel pace?</label>
+          <div class="pace-options">
+            <label><input type="radio" name="pace" value="relaxed"><span><b>🌱</b> Relaxed<small>Take it slow</small></span></label>
+            <label><input type="radio" name="pace" value="balanced" checked><span><b>🚶</b> Balanced<small>A bit of everything</small></span></label>
+            <label><input type="radio" name="pace" value="packed"><span><b>⚡</b> Packed<small>See more, do more</small></span></label>
+          </div>
+          <button class="submit-button" type="submit">Create my itinerary <span>→</span></button>
+          <p class="privacy-note">✦ No sign-up needed. Your plan stays in this browser.</p>
+        </form>
+
+        <aside class="planner-aside">
+          <div class="aside-photo"></div>
+          <div class="aside-content"><div class="eyebrow">THE ROAMLY WAY</div><h3>Travel that feels like <em>you.</em></h3><p>Skip the endless tabs. Get a flexible starting point for a trip built around the things you enjoy.</p>
+            <div class="aside-feature"><span>01</span><div><strong>Made for your interests</strong><small>Culture, food, outdoors and more.</small></div></div>
+            <div class="aside-feature"><span>02</span><div><strong>Mindful of your budget</strong><small>A simple estimate before you go.</small></div></div>
+            <div class="aside-feature"><span>03</span><div><strong>Easy to make your own</strong><small>Save, print, and adjust your plan.</small></div></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="results" class="results-section hidden" aria-live="polite">
+      <div class="results-header"><div><div class="eyebrow">YOUR PERSONALIZED PLAN</div><h2 id="result-title">Your itinerary</h2><p id="result-subtitle"></p></div><div class="result-actions"><button id="save-button" class="secondary-button">♡ Save plan</button><button id="print-button" class="secondary-button">↗ Print / PDF</button></div></div>
+      <div class="summary-grid" id="summary-grid"></div>
+      <div class="itinerary-layout"><div id="itinerary-days" class="itinerary-days"></div><aside class="budget-card"><div class="eyebrow">BUDGET SNAPSHOT</div><h3>Estimated costs</h3><p class="budget-disclaimer">Planning estimate per person. Actual prices vary by season and availability.</p><div id="budget-breakdown"></div><div class="budget-total"><span>Estimated total</span><strong id="budget-total"></strong></div><p class="budget-tip">✦ Tip: Keep a little extra for spontaneous discoveries.</p></aside></div>
+      <div class="results-footer"><span>✳ Your trip is a starting point — check opening times and local travel advice before you go.</span><button id="new-plan-button" class="text-button">Plan another trip ↗</button></div>
+    </section>
+
+    <section id="how-it-works" class="how-section">
+      <div class="eyebrow">SIMPLE BY DESIGN</div><h2>From “some day” to <em>departure day.</em></h2>
+      <div class="how-grid"><article><span>01</span><div class="how-icon">⌖</div><h3>Tell us what you love</h3><p>Choose your destination, trip length, budget, and the experiences you enjoy.</p></article><article><span>02</span><div class="how-icon">✳</div><h3>Get your game plan</h3><p>Receive a suggested daily schedule with a pace that suits your style.</p></article><article><span>03</span><div class="how-icon">↗</div><h3>Make it yours</h3><p>Save your itinerary locally or print it to take along on your adventure.</p></article></div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">r.</span><span>roamly</span></a><p>Made for the joy of getting out there. <span>✳</span></p><small>Demo project · Itineraries are suggestions, not live bookings.</small></footer>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
